@@ -1,6 +1,6 @@
 {
   "name": "symphony-app",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Command line utility to create symphony applications using the sapphire framework",
   "main": "index.js",
   "scripts": {

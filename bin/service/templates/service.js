@@ -20,6 +20,7 @@ Package('{App}.Services', {
 			}, this);
 
 			bootstrap.exportService(this.serviceName);
+			done();
 		},
 	})
 });

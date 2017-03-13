@@ -43,6 +43,7 @@ exports.getApplication = function(req, res)
 	app.setTitle('{Name}');
 	app.setBody('apps/{path}/templates/body.html');
 	app.setMaster('apps/{path}/templates/master.html');
+	app.addVariable('baseUrl', CONFIG.baseUrl);
 	app.addVariable('appId', CONFIG.{app}.appId);
 
 	return main(req, res, app)
