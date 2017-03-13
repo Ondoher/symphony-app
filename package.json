@@ -1,0 +1,33 @@
+{
+  "name": "symphony-app",
+  "version": "0.0.2",
+  "description": "Command line utility to create symphony applications using the sapphire framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "bin": {
+    "sapp": "bin/sapp.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ondoher/symphony-app.git"
+  },
+  "keywords": [
+    "sapphire",
+    "symphony",
+    "extenstions-api"
+  ],
+  "author": "Glenn Anderson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ondoher/symphony-app/issues"
+  },
+  "homepage": "https://github.com/Ondoher/symphony-app#readme",
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "mkdirp": "^0.5.1",
+    "mootools": "^1.5.2",
+    "ncp": "^2.0.0"
+  }
+}

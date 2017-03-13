@@ -1,0 +1,15 @@
+{
+  "applications": [
+    {
+      "type": "sandbox",
+      "id": "{app}",
+      "name": "{App}",
+      "blurb": "Do the {App} thing",
+      "publisher": "",
+      "url": "https://localhost:8080/{name}",
+      "domain": "localhost",
+      "visible": true,
+      "icon":"https://localhost:8081/{name}/assets/images/app.png"
+    }
+  ]
+}

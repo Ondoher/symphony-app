@@ -1,0 +1,25 @@
+
+usage: sapphire install |
+                controller <app> |
+                module <app> (<name>) |
+                service <what> <name> <import> |
+                [page|dialog|feature|service] <what> <name>
+
+Use to create the necessary boiler plate for Symphony extention applications
+
+commands:
+      install    - creates an installation of sapphire in the current directory
+      controller - creates a new application controller. This is implemented as a sapphire app.
+                   If no name is provided will use the app name
+      module     - creares a new application module. This is implemented as a sapphire app
+                   If no name is provided will use "{app}-module", e.g. "ticker-module"
+      service    - given an app creates a new Symphony service.
+      page       - given an app creates a new page feature in the specified application
+      dialog     - given an app creates a new dialog in the specified application
+      feature    - given an app creates a new feature in the specified application
+
+arguments:
+      app       - the name of the application
+      what      - this a sapphire application, either a module or controller
+      name      - the name of the thing being created
+      import    - comma separated list of services to import
