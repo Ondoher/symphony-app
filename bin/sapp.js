@@ -61,8 +61,7 @@ switch (params[0])
 
 function replaceNames(text, names)
 {
-	names = $H(names);
-	names.each(function(value, name)
+	Object.each(names, function(value, name)
 	{
 		var regEx = new RegExp('\{' + name + '\}', 'g');
 		text = text.replace(regEx, value);
