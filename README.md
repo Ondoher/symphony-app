@@ -91,7 +91,7 @@ sapp service myapp new-service "application-nav,module"
 
 The rest of the available commands act the same as their Sapphire counterparts.
 
-#Sapphire TL;DR
+# Sapphire TL;DR
 
 The full documentation of the Sapphire framework is linked to above. Here are a few
 key concepts to understand the code.
