@@ -1,6 +1,6 @@
 Package('{Name}.Services', {
 	Bootstrap : new Class({
-		implements: ['exportService', 'importService'],
+		implements: ['exportService', 'importService', 'getUserId'],
 
 		initialize : function()
 		{
@@ -31,6 +31,11 @@ Package('{Name}.Services', {
 			$(document.body).addClass(theme.size);
 		},
 
+		getUserId : function()
+		{
+			return this.userId;
+		},
+
 		onStart : function(done)
 		{
 			SYMPHONY.remote.hello()
@@ -43,14 +48,15 @@ Package('{Name}.Services', {
 		onReady : function()
 		{
 			return SYMPHONY.application.connect({NAME}.appId, this.importServices, this.exportServices)
-				.then(function()
+				.then(function(response)
 				{
+					this.userId = response.userReferenceId;
 					this.uiService = SYMPHONY.services.subscribe('ui');
 					this.modulesService = SYMPHONY.services.subscribe('modules');
 
 					this.uiService.listen('themeChangeV2', this.onThemeChange.bind(this));
 
-					{NAME}.events.fire('module-connected');
+					{NAME}.events.fire('start');
 				}.bind(this))
 				.done();
 		},

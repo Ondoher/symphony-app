@@ -1,6 +1,6 @@
 Package('{Name}.Services', {
 	Bootstrap : new Class({
-		implements: ['exportService', 'importService'],
+		implements: ['exportService', 'importService', 'getUserId'],
 
 		initialize : function()
 		{
@@ -24,6 +24,11 @@ Package('{Name}.Services', {
 			this.importServices.push(name);
 		},
 
+		getUserId : function()
+		{
+			return this.userId;
+		},
+
 		onStart : function(done)
 		{
 			SYMPHONY.remote.hello()
@@ -35,9 +40,11 @@ Package('{Name}.Services', {
 		onReady : function()
 		{
 			return SYMPHONY.application.register({NAME}.appId, this.importServices.unique(), this.exportServices.unique())
-				.then(function()
+				.then(function(response)
 				{
-					{NAME}.events.fire('application-registered');
+					this.userId = response.userReferenceId;
+
+					{NAME}.events.fire('start');
 				}.bind(this))
 				.done();
 		},
