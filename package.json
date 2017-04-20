@@ -1,7 +1,7 @@
 {
   "name": "symphony-app",
-  "version": "0.0.6",
-  "description": "Command line utility to create symphony applications using the sapphire framework",
+  "version": "0.1.0",
+  "description": "Command line utility to create symphony applications using the Sapphire framework",
   "main": "index.js",
   "scripts": {
     "test": "npm test"
@@ -19,7 +19,7 @@
     "extenstions-api"
   ],
   "author": "Glenn Anderson",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/Ondoher/symphony-app/issues"
   },
